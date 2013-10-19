@@ -1,12 +1,13 @@
 package com.mobi.utaradioandroid;
 
 import java.io.IOException;
-
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import com.parse.Parse;
+import com.parse.ParseAnalytics;
 
 public class SplashActivity extends Activity {
 
@@ -27,6 +28,7 @@ public class SplashActivity extends Activity {
 			//mPlayer.setDataSource("http://webmedia-2.uta.edu:1935/uta_radio/live/playlist.m3u8");
 			mPlayer.setDataSource("rtsp://webmedia-2.uta.edu:1935/uta_radio/live");
 			mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+			Parse.initialize(this, "5Rc4lIyriYcjheIxMcVkqTbC9GkAkRbfz8w8ZDM8", "t3vL42AhBSMBv7iA6nfcVO3uVuPyCkkNwFIKAafb");
 			
 		} catch (IllegalArgumentException e) {
 			// TODO Auto-generated catch block
