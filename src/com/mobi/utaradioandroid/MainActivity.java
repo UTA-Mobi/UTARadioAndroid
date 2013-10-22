@@ -241,10 +241,9 @@ public class MainActivity extends Activity {
 			if (planet.equals("Radio")) {
 				rootView = inflater.inflate(R.layout.radio, container, false);
 				RadioMediaPlayer radio = new RadioMediaPlayer(rootView, mPlayer);
-
 			} else if (planet.equals("Request Song")) {
-				rootView = inflater.inflate(R.layout.request_song, container,
-						false);
+				rootView = inflater.inflate(R.layout.request_song, container, false);
+				SongRequestMessage requestUI = new SongRequestMessage(rootView);
 			} else if (planet.equals("Current Staff")) {
 				rootView = inflater.inflate(R.layout.current_staff, container,
 						false);
